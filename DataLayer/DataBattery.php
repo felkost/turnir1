@@ -1,12 +1,16 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: Jarvis
- * Date: 05.08.2017
- * Time: 18:27
+ * Клас описує модель елемента живлення.
+ * напруга В,
+ * питома ємність, Аh
+ * струм розрядки, стандартний, мА
+ * струм розрядки, максимальний, мА
  */
 class DataBattery
 {
-
+    public $u;
+    public $capacity;
+    public $I;
+    public $maxI;
 }

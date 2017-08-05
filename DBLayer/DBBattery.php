@@ -1,12 +1,10 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: Jarvis
- * Date: 05.08.2017
- * Time: 18:28
+ * Клас описує методи взаємодії з БД
+ * для модифікації інформації про елементи живлення.
  */
-class DBBattery
+class DBBattery extends BaseConnection
 {
 
 }
