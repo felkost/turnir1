@@ -6,6 +6,8 @@
  * Конструктор створює з'єднання з БД, а якщо воно неуспішне, то закриває.
  * Деструктор закриває з'єднання з БД.
  * Ці методи наслідуються всіма класами, що взаємодують з БД.
+ *
+ * PS: тексти, які виводяться в ТЕСТОВОМУ режимі, краще в майбутньому заблокувати.
  */
 class BaseConnection 
 {
@@ -17,14 +19,14 @@ class BaseConnection
     //Конструктор класса устанавливает соединение с базой данных
     function __construct()
     {
-        if ($mysqli = new mysqli(self::SERVER, self::USERNAME, self::PASSWORD,
-            self::DBNAME))
+        if ($mysqli = new mysqli(self::SERVER, self::USERNAME, self::PASSWORD, self::DBNAME))
         {
             $this->connection = $mysqli;
+            echo "З'єднання відкрито.\n";
         }
         else
         {
-            echo "Не удается соединиться с сервером MySQL";
+            echo "Не удается соединиться с сервером MySQL.\n";
             exit;
         }
 
@@ -33,5 +35,13 @@ class BaseConnection
     function __destruct()
     {
         $this->connection->close();
+        echo "З'єднання закрито.\n";
+    }
+
+    function queryMysql($query)
+    {
+        $result = $this->connection->query($query);
+        if (!$result) die("Проблема з запитом: ".$this->connection->error);
+        return $result;
     }
 }
