@@ -1,0 +1,60 @@
+/*
+ https://webdesignerhut.com/css-dropdown-menu/
+ https://codepen.io/andornagy/pen/xhiJH
+ */
+/* Giving a background-color to the nav container. */
+nav {
+    margin: 0 0;
+    background-color: #8f92b3;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+    margin: 0px -7px 0 0;
+    display:inline-block;
+    background-color: #8f92b3;
+}
+
+/* Styling the links */
+nav a {
+    display:block;
+    padding:0 10px;
+    color:#FFF;
+    font-size:14px;
+    line-height: 20px;
+    text-decoration:none;
+}
+
+/* Background color change on Hover */
+nav a:hover {
+    background-color: #3e45ce;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+    display:inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    min-width:170px;
+    display:list-item;
+    position: relative;
+}

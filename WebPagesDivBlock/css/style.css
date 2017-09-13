@@ -1,0 +1,44 @@
+@import "style_block.css";
+
+.page{
+    width: 960px;
+    margin: 10px auto;
+}
+.main_menu.page{}
+
+.graph{
+    float: left;
+    width: 455px;
+    height: 450px;
+}
+.graph_menu{
+    height: 30px;
+}
+.graph_image{
+    height: 370px;
+}
+.chart{
+    float: right;
+    width: 455px;
+    height: 450px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.task_describe{
+    clear: both;
+}
+.task{
+    float: left;
+    width: 760px;
+    min-height: 50px;
+}
+.solve{
+    float: right;
+    width: 120px;
+    min-height: 50px;
+}

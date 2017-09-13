@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Веб інтерфейс</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="js/go-debug.js"></script>
+
+    <!-- Наступні веб-посилання є дійсними, проект на них працює. але вони вимагають постійного підключення до Інтернету-->
+    <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dc/1.7.5/dc.css"/>-->
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js" charset="utf-8"></script>-->
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>-->
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/1.7.5/dc.js"></script>-->
+  <!--Вирішення проблеми з D3.js
+      Приклад, де використовуються  d3+crossfilter+dc вимагає наступних дій:
+      1. Порядок підключення: dc.css, d3.min.js, crossfilter.js, dc.js
+      2. Для взаємодії d3 з crossfilter+dc в даному випадку підходить версія 3.5.17, яку можна скачати
+         з https://github.com/d3/d3/releases?after=v4.2.6
+       PS: на офіційному сайті є остання версія D3.js - вона не взаємодіє з crossfilter+dc,
+         використовуються в проекті та скачені з офіцйних сайтів (видно, що ці проекти давно не оновлювались).
+  -->
+    <link rel="stylesheet" type="text/css" href="js/dc/dc.css"/>
+    <script type="text/javascript" src="js/d3/d3.min.js"></script>
+
+    <script type="text/javascript" src="js/crossfilter/crossfilter.js"></script>
+
+    <script type="text/javascript" src="js/dc/dc.js"></script>
+
+</head>
+<body>
+<div class="page block">
+    <div class="container_main_menu block">
+        <nav>
+            <ul>
+                <li><a href="#model">Модель</a>
+                    <ul>
+                        <li><a href="#create">Створити</a></li>
+                        <li><a href="#open">Відкрити</a></li>
+                        <li><a href="#save">Зберегти</a></li>
+                    </ul>
+                </li>
+                <li><a href="#calc">Обчислення</a></li>
+                <li><a href="#help">Допомога</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="section_base block">
+        <div class="graph block">
+            <div class="graph_menu block">
+                <nav>
+                    <ul>
+                        <li><a href="#resistor">Резистор</a> </li>
+                        <li><a href="#lamp">Лампа</a></li>
+                        <li><a href="#node">Вузол</a></li>
+                        <li><a href="#energ">ДЖ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="myDiagramDiv" class="graph_image block"></div>
+        </div>
+        <div class="chart block">
+            <div id="chart-ring-year" style="height: 200px; background: aliceblue;"></div>
+            <div id="chart-row-spenders" style="height: 200px; background: yellowgreen;"></div>
+        </div>
+    </div>
+    <div class="task_describe block">
+        <div class="task block">task</div>
+        <div class="solve block">solve</div>
+    </div>
+</div>
+<script src="js/main.js"></script>
+<script src="js/chart.js"></script>
+</body>
+</html>
